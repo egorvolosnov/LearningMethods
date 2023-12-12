@@ -1,0 +1,165 @@
+/*Контент*/
+main{
+    width: 95%;
+    float: left;
+    height: 100%;
+    border: 5px solid silver;
+    text-align: center;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+#Start{
+    background: rgb(87, 86, 86);
+    color: aliceblue;
+    height: 30%;
+    font-family: 'Montserrat';
+    border-bottom: 5px dashed silver;
+    padding: 20px 20px;
+    margin-bottom: 20px;
+}
+#Start h1{
+    text-align: center;
+    font-family: 'Montserrat';
+}
+#Start p{
+    width: 50%;
+    float: left;
+    font-family: 'Montserrat';
+    margin: 40px 0px 0px 30px;
+    text-align: center;
+    display: flex;
+    line-height: 200%;
+}
+#Start img{
+    margin-right: 50px;
+    margin-bottom: 10px;
+}
+
+.Effective{
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    text-align: center;
+    color: aliceblue;
+    font-family: 'Montserrat'; 
+}
+
+.Effective img {
+    margin-bottom: 10px; /* Добавляем отступ снизу для изображения */
+}
+
+.Effective h1 {
+    margin-bottom: 10px; /* Добавляем отступ снизу для заголовка */
+}
+.Effectivelist{
+    width: 100%;
+    float: left;
+    background: rgb(88, 152, 114);
+    border-bottom: 5px dotted silver;
+    border-top: 5px dotted silver;
+}
+.Effectivelist img{
+    display: inline-block;
+}
+.Effectivelist ol{
+    text-align: justify;
+    font-family: 'Montserrat';
+    color: aliceblue;
+    display: inline-block;
+    margin: 5%;
+    line-height: 400%;
+    counter-reset: my-counter;
+}
+.Effectivelist ol li {
+    list-style-type: none; 
+    position: relative; 
+    counter-increment: my-counter; 
+    margin-bottom: 5px; 
+}
+.Effectivelist ol li:before {
+    content: ''; 
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    background: url('../images/check2.png') no-repeat center center; 
+    background-size: cover;
+    margin-right: 5px;
+}
+#E2{
+    background: rgb(93, 140, 174);
+}
+#E2 ol li:before{
+    content: ''; 
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    background: url('../images/cross2.png') no-repeat center center;
+    background-size: cover;
+    margin-right: 5px;
+}
+#E2 img{
+    border: 2px solid silver;
+    border-radius: 10px;
+}
+.Readmore{
+    width: 100%;
+    height: 60px;
+    border-bottom: 5px dashed silver;
+    color: aliceblue;
+    background: rgb(87, 86, 86);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.Readmore a{
+    text-decoration: none;
+    color: inherit;
+}
+.Readmore a:hover{
+    color: rgb(87, 86, 86);
+    background: aliceblue;
+    border: 10px solid aliceblue;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+}
+#readmore2{
+    margin-bottom: 0;
+    border-bottom: 0;
+    height: 60px;
+}
+
+/*Адаптивность контента*/
+@media screen and (max-width: 772px) {
+    #Start p {
+        width: 100%;
+        margin-left: 0;
+        float: 0;
+    }
+    #Start img{
+        width: 80%;
+        margin: 0 auto;
+        float: 0;
+    }
+    .Effectivelist img{
+        width: 80%;
+        align-items: center;
+        display: block;
+        margin: 0 auto;
+    }
+    .Effectivelist ol{
+        display: block;
+    }
+    .Effectivelist{
+        float: 0;
+    }
+}
+@media screen and (max-width: 439px) {
+    #check{
+        width: 7%;
+    }
+    #cross{
+        width: 7%;
+    }
+}

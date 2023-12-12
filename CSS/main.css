@@ -1,0 +1,378 @@
+/*Экспорт шрифтов*/
+@font-face {
+    font-family: 'Montserrat';
+    src: url(fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family: 'MemphisRiver';
+    src: url(fonts/Memphis\ River.otf);
+}
+
+/*Применение для всей страницы*/
+*{
+    margin: 0;
+    padding: 0;    
+}
+
+/*Изменение фона и шрифта для всего сайта*/
+body {
+    background: linear-gradient(45deg, rgb(108, 133, 108)50%, rgb(85, 136, 182)100%);
+}
+.content-wrapper{
+    font-size: 24px;
+}
+.content-wrapper2{
+    font-size: 20px;
+}
+/*Настройка хидера и футера*/
+header, footer{
+    display: block;
+    float: left;
+    width: 100%;
+    height: 70px;
+    color: aliceblue;
+    background: rgb(87, 86, 86);
+    border-bottom: 5px solid silver;
+    font-family: 'MemphisRiver';
+    font-size: 54px;
+    text-align: center;
+    line-height: 70px;
+    margin-bottom: 20px;
+}
+
+
+/*Хидер*/
+#logo{
+    margin-left: 20px;
+    width: 60px;
+    float: left;
+    display: block;
+    text-align: left;
+    cursor: pointer;
+}
+#burger-icon {
+    margin-right: 20px;
+    text-align: right;
+    width: 35px;
+    display: block;
+    float: right;
+    cursor: pointer;
+    z-index: 2;
+    position: fixed;
+    top: 5px;
+    right: 20px; 
+}
+#burger-icon span {
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: aliceblue;
+    margin-bottom: 10px;
+    transition: 0.4s;
+}
+#burger-icon.opened span:nth-child(1) {
+    transform: rotate(-45deg) translate(-50%, 3px);
+}
+
+#burger-icon.opened span:nth-child(2) {
+    opacity: 0;
+}
+
+#burger-icon.opened span:nth-child(3) {
+    transform: rotate(45deg) translate(-50%, -3px);
+}
+
+
+
+/*Футер*/
+footer{
+    border-top: 2px;
+    border-bottom: 0;
+    border-top: 5px solid silver;
+    margin-bottom: 0;
+    margin-top: 20px;
+    justify-items: center;
+    align-items: center;
+    z-index: 1;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 70px;
+  }
+#telegram, #vk, #github{
+    width: 50px;
+    display: inline-block;
+    margin-right: 40px;
+    vertical-align: middle;
+ 
+}
+
+
+/*Список навигации*/
+.nav-wrapper {
+    margin: 0px 20px;
+}
+#nav{
+    width: 100%;
+    float: left;
+    list-style: none;
+    margin-bottom: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+#nav li{
+    font-family:'Montserrat';
+    font-size: 25px;
+    display: inline-block;
+    background: rgb(185, 204, 211);
+    border: 2px solid silver;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 0px 20px;
+}
+#nav li a {
+    text-decoration: none;
+    color: rgb(87, 86, 86);
+}
+#nav li:hover{
+    color: aliceblue;
+    background: rgb(87, 86, 86);
+    border: 2px solid rgb(87, 86, 86);
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+#nav li:hover > a {
+    color: aliceblue;
+}
+
+#nav li:not(:last-of-type){
+    margin-right: 20px;
+}
+
+
+
+/*Скролл наверх*/
+.scroll-up {
+    position: fixed;
+    bottom: 30px;
+    right: 50px;
+    cursor: pointer;
+    display: none;
+}
+.scroll-up img {
+    width: 70px;
+    background: url('../images/scroll.png') no-repeat center center;
+    background-size: cover;
+}
+.scroll-up img:hover {
+    background: url('../images/scrollup2.png') no-repeat center center;
+    background-size: cover;
+}
+
+
+/*Боковая сторона*/
+#asideh1 {
+    width: 100%;
+    height: 10%;
+    border-bottom: 5px dashed silver;
+    color: aliceblue;
+    background: rgb(87, 86, 86);
+    text-align: center;
+    line-height: 200%;
+    margin-bottom: 10px;
+    font-family: 'Montserrat';
+}
+.aside {
+    position: fixed;
+    background: rgb(87, 86, 86);
+    color: aliceblue;
+    width: 60%;
+    height: 100%;
+    top: 0;
+    right: -60%; /* Изначально скрыть aside за пределами экрана */
+    transition: right 0.3s ease-in-out;
+    z-index: 1;
+    border-left: 5px solid silver;
+}
+.aside.opened {
+    right: 0;
+}
+.aside.closed {
+    right: -60%; /* Ваше изначальное значение right */
+}
+.fixed {
+    position: fixed;
+    top: 0;
+    right: 25px;
+    width: 40%;
+    transition: right 0.3s ease-in-out;
+}
+.content-wrapper2 {
+    padding-top: 80px; /* Учитывайте высоту вашего фиксированного блока */
+}
+.listsaside h2{
+    width: 100%;
+    height: 10%;
+    border-bottom: 5px dotted silver;
+    color: aquamarine;
+    text-align: center;
+    line-height: 40px;
+    font-family: 'Montserrat';
+    font-size: 22px;
+}
+.listsaside h2 a{
+    text-decoration: none;
+    color: aquamarine;
+}
+.listsaside h2 a:hover{
+    color: aquamarine;
+    border: 5px solid aliceblue;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+#asideh2 {
+    margin-top: 20px;
+    border-top: 5px dashed silver;
+}
+#asideh3{
+    display: none;
+    border-top: 5px dashed silver
+}
+.burger-line{
+    width: 100%;
+    height: 10%;
+    text-align: justify;
+    font-family: 'Montserrat';
+    color:aliceblue;
+    line-height: 300%;
+    counter-reset: my-counter;
+    margin-left: 20px;
+    margin-bottom: -10px;
+}
+.burger-line a{
+    text-decoration: none;
+    color: aliceblue;
+}
+.burger-line a:hover{
+    color: rgb(87, 86, 86);
+    background:  aliceblue;
+    border: 10px solid aliceblue;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+
+/*Адаптивность для всех форматов*/
+
+
+
+/*Адаптивность шрифта*/
+@media screen and (max-width: 1785px) {
+    .content-wrapper {
+        font-size: 22px;
+    }
+}
+@media screen and (max-width: 1640px) {
+    .content-wrapper {
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 1496px) {
+    .content-wrapper {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 1354px) {
+    .content-wrapper {
+        font-size: 16px;
+    }
+    #nav li{
+        font-size: 22px;
+    }
+}
+@media screen and (max-width: 1209px) {
+    .content-wrapper {
+        font-size: 14px;
+    }
+    #nav li{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 1059px) {
+    .content-wrapper {
+        font-size: 12px;
+    }
+    #nav li{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 904px) {
+    .content-wrapper {
+        font-size: 10px;
+    }
+    #nav li{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .content-wrapper {
+        font-size: 10px;
+    }
+    #nav li{
+        font-size: 12px;
+    }
+}
+
+/*Адаптивность боковой стороны и шапки*/
+@media screen and (max-width: 953px) {
+    #asideh1{
+        line-height: 100%;
+    }
+    .content-wrapper2{
+        font-size: 18px;
+    }
+    .content-wrapper2 h2{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 772px){
+    #asideh3{
+        display: block;
+    }
+    .nav-wrapper{
+        display: none;
+    }
+    .content-wrapper2{
+        font-size: 18px;
+    }
+    .content-wrapper2 h2{
+        font-size: 16px;
+    }
+    
+}
+@media screen and (max-width: 553px) {
+    .content-wrapper2{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 454px){
+    .listsaside h2{
+        font-size: 16px;
+    }
+    .listsaside{
+        font-size: 12px;
+    }
+    #asideh1{
+        font-size: 24px;
+    }
+    header{
+        font-size: 40px;
+    }
+}

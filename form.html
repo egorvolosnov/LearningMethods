@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма</title>
+    <link rel="stylesheet" href="CSS/form.css?v=1.0">
+    <link rel="shortcut icon" href="images/2824450_academic_cap_graduation_school_square_icon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="form">
+        <form action="#" id="form" class="form__body">
+            <h1 class="form__title">Поделитесь своими идеями</h1>
+            <div class="form__item">
+                <label for="formName" class="form__label">
+                    Имя*:
+                </label>
+                <input id= "formName" type="text" name="name" class="form__input _req">
+            </div>    
+            <div class="form__item">
+                <label for="formEmail" class="form__label">
+                    E-mail*:
+                </label>
+                <input id= "formEmail" type="text" name="email" class="form__input _req _email">                                    
+            </div>
+            <div class="form__item">
+                <label for="formMessage" class="form__label">
+                    Ваши идеи*:
+                </label>
+                <textarea name="message" id="formMessage" class="form__input _req"></textarea>                                    
+            </div>
+            <div class="form__item">
+                <div class="checkbox">
+                    <input id="formAgreement" type="checkbox" name="agreement" class="checkbox__input _req" checked>
+                    <label for="formAgreement" class="checkbox__label"><span>Я даю своё согласие на обработку персональных данных*</span></label>
+                </div>
+            </div>   
+            <button type="submit" class="form__button">Отправить</button>
+        </form>
+    </div> 
+    <script src="JS/script2.js"></script>        
+</body>
+</html>
